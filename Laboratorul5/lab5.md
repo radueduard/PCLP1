@@ -1,3 +1,6 @@
+Laboratorul 05 - Definire și utilizare funcții
+-
+
 Problema 1
 -
 Scrieţi o funcţie care să calculeze numărul de cifre ale unui număr întreg dat ca parametru, N. În funcţia main() citiţi un număr de la tastatură şi afişaţi rezultatul apelului funcţiei. Antetul funcţiei trebuie să respecte următorul format:
