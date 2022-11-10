@@ -1,4 +1,7 @@
-Problema 1
+Laboratorul 05 - Definire și utilizare funcții
+=
+
+Problema 1 *(rezolvata)*
 -
 Scrieţi o funcţie care să calculeze numărul de cifre ale unui număr întreg dat ca parametru, N. În funcţia main() citiţi un număr de la tastatură şi afişaţi rezultatul apelului funcţiei. Antetul funcţiei trebuie să respecte următorul format:
 
@@ -30,6 +33,40 @@ Numarul de cifre al numarului citit
 | 9         | 1        |
 | -325      | 3        |
 
+***Rezolvare:***
+-
+```c
+#include <stdio.h>
+ 
+int nrcf(long n)
+{
+ if (n == 0)
+     return 1;
+ 
+ int nr = 0; /* declar un contor in care sa numar cifrele */
+ 
+ while (n) /* cat timp mai pot obtine o cifra */
+ {
+     n = n/10; /* o trunchiez pe ultima */
+     nr++; /* incrementez contorul */
+ }
+ 
+ return nr; /* functia intoarce numarul de cifre */
+}
+ 
+int main(void)
+{
+ long N;
+ printf("N = "); /* afisam un mesaj pentru utilizator */
+ scanf("%ld", &N); /* citim numarul introdus de la tastatura */
+ printf("Numarul %ld are %d cifre!\n", N, nrcf(N)); /* afisez numarul de cifre */
+ return 0;
+}
+```
+
+***Implementare:***
+-
+[problema1.c](./problema1.c)
 
 Problema 2
 -
@@ -59,11 +96,15 @@ Se va afisa DA sau NU. Astfel ca DA semnifica existenta cifrei c in numarul n, s
 ***Exemplu:***
 -
 
-| Intrare    | Ieşire   |
-|:-----------|:---------|
-| 13584 3    | DA       |
-| 100111 0   | DA       |
-| 666013 8   | NU       |
+| Intrare  | Ieşire |
+|:---------|:-------|
+| 13584 3  | DA     |
+| 100111 0 | DA     |
+| 666013 8 | NU     |
+
+***Implementare:***
+-
+[problema2.c](./problema2.c)
 
 Problema 3
 -
@@ -102,6 +143,10 @@ Afisarea tuturor descompunerilor pentru numarul dat **N**
 |:----------|:------------------|
 | 12        | 1 + 11<br>5 + 7   |
 
+***Implementare:***
+-
+[problema3.c](./problema3.c)
+
 Problema 4
 -
 Se citesc de la tastatură patru numere întregi reprezentând două fracţii x1 / y1 şi x2/ y2. Aduceţi fracţiile la acelaşi numitor (cel mai mic posibil) folosind o funcţie care calculează cel mai mic multiplu comun a două numere întregi. Consideraţi că fracţiile date ca input sunt deja în formă ireductibilă. Antetul funcţiei trebuie să respecte următorul format:
@@ -136,13 +181,19 @@ Cele 2 fractii aduse la acelasi numitor
 | 1  2<br>1  11    | 11  22<br>2  22   |
 | 5  12<br>3  14   | 35  84<br>18  84  |
 
+***Implementare:***
+-
+[problema4.c](./problema4.c)
+
 Problema 5
 -
 
 Să se scrie un program pentru calculul sumei seriei Taylor pentru funcţia e^x până la un termen dat:
 
 
-e^x = 1 + x/1! + (x^2)/2! + (x^3)/3! + … + (x^n)/n!
+$$
+e^x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + … + \frac{x^n}{n!}
+$$
 
 
 Se vor defini şi utiliza următoarele funcţii:
@@ -184,6 +235,10 @@ Valoarea expresiei expuse mai sus pentru x şi n date, cu precizie de patru zeci
 |:----------|:---------|
 | 2.5 10    | 12.1817  |
 
+***Implementare:***
+-
+[problema5.c](./problema5.c)
+
 Problema 6
 -
 Se citesc n puncte de la tastatură, date prin coordonatele lor: x[i], y[i], i=1,n. Să se afişeze perechea de puncte între care distanţa este maximă (dacă există mai multe astfel de perechi, se poate afişa oricare dintre ele), precum şi această distanţă. Se va defini şi folosi o funcţie pentru calculul distanţei dintre două puncte în plan, care trebuie să respecte următorul antet:
@@ -206,6 +261,10 @@ Pe primele doua linii perechea de puncte intre care distanta e maxima. Pe a trei
 | Intrare                         | Ieşire                  |
 |:--------------------------------|:------------------------|
 | 4<br>0 0<br>0 1<br>1 0<br>1 1   | 0 0<br>1 1<br>1.414214  |
+
+***Implementare:***
+-
+[problema6.c](./problema6.c)
 
 Problema 7
 -
@@ -242,6 +301,10 @@ Cifrele numarului dat, sortate dupa cum se cere in enunt.
 | 19430123   | 94332110  |
 | 2534562    | 2234556   |
 
+***Implementare:***
+-
+[problema7.c](./problema7.c)
+
 Problema 8
 -
 Scrieţi o funcţie care caculează aria intersecţiei a două dreptunghiuri, date prin coordonatele colţurilor stânga-sus şi dreapta-jos. Coordonatele sunt numere întregi pozitive. Funcţia trebuie să respecte următorul antet:
@@ -270,3 +333,7 @@ Un numar reprezentand aria intersectiei dintre cele 2 dreptunghiuri.
 |:-------------------------|:---------|
 | 1 10 5 5<br/> 2 7 4 4    | 4        |
 | 1 3 3 1<br/> 2 4 4 4     | 0        |
+
+***Implementare:***
+-
+[problema8.c](./problema8.c)

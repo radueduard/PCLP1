@@ -7,6 +7,4 @@
 int main() {
 	puts("Hello World!");
 	return 0;
-
-	// Modificare de test
 }
