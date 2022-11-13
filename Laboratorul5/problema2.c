@@ -4,7 +4,24 @@
 
 #include <stdio.h>
 
+int cifra(int, int);
+
 int main() {
-	puts("Hello World!");
-	return 0;
+    int n, c;
+    scanf("%d%d", &n, &c);
+    if (cifra(n, c))
+        printf("DA");
+    else
+        printf("NU");
+    return 0;
+}
+
+int cifra(int n, int c) {
+    do {
+        if (n % 10 == c)
+            return 1;
+        n /= 10;
+    } while (n);
+    return 0;
+
 }
