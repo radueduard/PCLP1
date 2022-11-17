@@ -6,5 +6,6 @@
 
 int main() {
 	puts("Hello World!");
+	int i = 2;
 	return 0;
 }
