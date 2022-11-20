@@ -6,5 +6,3 @@
 [Lipseste](problema4)
 [Lipseste](problema5)
 [Lipseste](problema6)
-[Lipseste](problema7)
-[Lipseste](problema8)
