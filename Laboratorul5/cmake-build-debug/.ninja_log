@@ -1,0 +1,14 @@
+# ninja log v5
+1	58	6897832178840486	CMakeFiles/Laboratorul5.dir/problema5.c.obj	f8ce0b09dabba43
+7	109	6897812169937397	CMakeFiles/Laboratorul5.dir/problema6.c.obj	e32b2b44cea93a34
+1	54	6897812917545308	CMakeFiles/Laboratorul5.dir/problema1.c.obj	9cb598ee11acad8a
+21	124	6897812170133415	CMakeFiles/Laboratorul5.dir/problema7.c.obj	d4f4807191a86b39
+1	112	6897812169937397	CMakeFiles/Laboratorul5.dir/problema2.c.obj	f205215b06af8b1e
+10	113	6897812169959090	CMakeFiles/Laboratorul5.dir/problema4.c.obj	f44b9f707f95bfee
+14	115	6897812170023816	CMakeFiles/Laboratorul5.dir/problema3.c.obj	fa2ac6b2f4b5fdaa
+24	119	6897812170074451	CMakeFiles/Laboratorul5.dir/problema8.c.obj	3bd0361b2aa3cf02
+1	120	6897833544320214	build.ninja	9568b26a68dccbde
+55	131	6897812918280428	Laboratorul5.exe	70b8ac879d9d6b34
+1	115	6897833544320214	build.ninja	9568b26a68dccbde
+1	53	6897833545325809	CMakeFiles/Laboratorul5.dir/problema5.c.obj	f8ce0b09dabba43
+54	126	6897833546029257	Laboratorul5.exe	f6a937c7ff0e5e70
