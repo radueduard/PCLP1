@@ -3,7 +3,7 @@
 //
 
 #include <stdio.h>
-void afisare (int V[], int dim);
+void afisare (int V[], int dim)
 {
     int i;
     for ( i = 0; i < dim; i++)
@@ -12,7 +12,7 @@ void afisare (int V[], int dim);
     }
     
 }
-void spirala (int A[][100], int m, int n, int V[])
+void spirala(int A[][100], int m, int n, int V[])
 {
     int y = 0, x = 0, size = 0;
     while (y < m && x < n) 
