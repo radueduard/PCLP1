@@ -1,10 +1,10 @@
 CC = gcc
-CFLAGS = -Wall
+CFLAGS = -Wall -lm
 
 all: $(patsubst %.c,%,$(wildcard *.c))
 
 run: $(TARGET)
-    ./$(TARGET)
+	./$(TARGET)
 	
 $(TARGET): $(TARGET).o
 	$(CC) $(CFLAGS) -o $(TARGET) $^

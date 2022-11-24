@@ -2,7 +2,7 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
-#include <stdio.h>
+#include<stdio.h>
 
 void sort(int a[], int n) {
     int i, j, aux;
