@@ -2,9 +2,9 @@
 
 ## Cuprins:
 
-5. [Definire și utilizare funcții](Laboratorul5/Laboratorul%2005%20-%20Definire%20%C8%99i%20utilizare%20func%C8%9Bii.md)
-6. [Funcții cu vectori](Laboratorul6/Laboratorul%2006%20-%20Func%C8%9Bii%20cu%20vectori.md)
-7. [Functii cu pointeri; Siruri de caractere](Laboratorul7/Laboratorul%2007%20-%20Funcții%20cu%20pointeri;%20Șiruri%20de%20caractere.md)
+5. [Definire și utilizare funcții](Laboratorul5/README.md)
+6. [Funcții cu vectori](Laboratorul6/README.md)
+7. [Functii cu pointeri; Siruri de caractere](Laboratorul7/README.md)
 
 
 ## Instructiuni folosire repository:
