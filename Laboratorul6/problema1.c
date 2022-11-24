@@ -1,4 +1,5 @@
-#include <stdio.h>
+
+#include<stdio.h>
 
 void sortare(int * p, int n) {
     for (int i = 0; i < n - 1; i++)

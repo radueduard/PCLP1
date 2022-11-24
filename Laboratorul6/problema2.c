@@ -2,8 +2,12 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
+<<<<<<< HEAD
 #include <stdio.h>
 #include <math.h>
+=======
+#include<stdio.h>
+>>>>>>> main
 
 void metoda_1(double * arr_laturi, double * arr_unghiuri)
 {

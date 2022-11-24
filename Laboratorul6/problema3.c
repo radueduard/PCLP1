@@ -2,7 +2,7 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
-#include <stdio.h>
+#include<stdio.h>
 
 void extragere_elemente(int * a, int * nr_a, int * b, int * nr_b, int * c)
 {

@@ -2,10 +2,11 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
-#include <stdio.h>
+#include<stdio.h>
 
 void spirala (int A[][100], int m, int n, int V[])
 {
+<<<<<<< HEAD
     int start = 0, end = m * n, linie_sus = 0, linie_jos = n - 1, coloana_stanga = 0, coloana_dreapta = m - 1, k = -1;
     int deplasare = 1;
     while(start < end)
@@ -66,4 +67,8 @@ int main() {
     spirala(A, m, n, V);
     afisare(V, m * n);
     return 0;
+=======
+	puts("Hello World!");
+	return 0;
+>>>>>>> main
 }
