@@ -2,6 +2,7 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
+<<<<<<< HEAD
 #include <stdio.h>
 void spirala(int a[][101], int m, int n, int v[])
 {
@@ -30,4 +31,12 @@ int main()
     for (i = 0; i < n * m; i++)
         printf("%d ", v[i]);
     return 0;
+=======
+#include<stdio.h>
+
+int main()
+{
+	puts("Hello World!");
+	return 0;
+>>>>>>> main
 }

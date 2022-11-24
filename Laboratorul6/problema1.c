@@ -2,8 +2,13 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
+<<<<<<< HEAD
 #include <stdio.h>
 void bubblesort(int *, int);
+=======
+#include<stdio.h>
+
+>>>>>>> main
 int main()
 {
     int v[101], n, i;

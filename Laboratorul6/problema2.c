@@ -2,6 +2,7 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
+<<<<<<< HEAD
 #include <stdio.h>
 #include <math.h>
 void unghiuri1(double l[], double u[]);
@@ -11,6 +12,10 @@ void unghiuri2(double x, double y, double z, double *ux, double *uy, double *uz)
     *uy = acos((x * x + z * z - y * y) / (2 * x * z)) * 180 / M_PI;
     *uz = acos((y * y + x * x - z * z) / (2 * y * x)) * 180 / M_PI;
 }
+=======
+#include<stdio.h>
+
+>>>>>>> main
 int main()
 {
     double x, y, z, l[4], u[4], ux, uy, uz;
