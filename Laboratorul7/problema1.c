@@ -1,7 +1,14 @@
 #include <stdio.h>
-
-int main()
+void swap(int *pa,int *pb)
 {
-    puts("Hello World!");
+    *pa=*pa+*pb;
+    *pb=*pa-*pb;
+    *pa=*pa-*pb;
+}
+int main()
+{   int a,b;
+    scanf("%d %d",&a,&b);
+    swap(&a,&b);
+    printf("%d %d",a,b);
     return 0;
 }
