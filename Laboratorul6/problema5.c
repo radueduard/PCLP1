@@ -2,7 +2,7 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
-#include <stdio.h>
+#include<stdio.h>
 
 void transform(int v[],int n,int x){
     for(int i=0;i<n;i++)
