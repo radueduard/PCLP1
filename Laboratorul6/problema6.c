@@ -1,6 +1,7 @@
 //
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
+
 #include <stdio.h>
 
 void spirala (int a[][100], int m, int n, int v[]){
@@ -38,14 +39,6 @@ void afisare(int v[],int dim){
 }
 int main()
 {
-    int A[100][100],i,j,n,m,v[100];
-    scanf("%d%d",&n,&m);
-    for(i=0;i<n;i++){
-        for(j=0;j<m;j++){
-            scanf("%d",&A[i][j]);
-        }
-    }
-    spirala(A,m,n,v);
-    afisare(v,n*m);
-
+    puts("Hello World!");
+    return 0;
 }
