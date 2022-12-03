@@ -1,7 +1,11 @@
 #include <stdio.h>
 
+
+
 int main()
 {
-    puts("Hello World!");
+    int k, n;
+    scanf("%d%d", &n, &k);
+
     return 0;
 }
