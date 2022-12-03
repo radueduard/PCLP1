@@ -23,7 +23,8 @@ while (p != NULL) {
     strins(p, withthis);
     p = strstr(p + strlen(withthis), replacethis);
 
-}
-printf ("%s\n", s);
-return 0;
+int main()
+{
+    puts("Hello World!");
+    return 0;
 }
