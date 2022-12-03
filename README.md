@@ -6,6 +6,7 @@
 6. [Funcții cu vectori](Laboratorul6/README.md)
 7. [Functii cu pointeri; Siruri de caractere](Laboratorul7/README.md)
 8. [Alocare Dinamica](Laboratorul8/README.md)
+9. [Structuri - Enumerări - Uniuni](Laboratorul9/README.md)
 
 
 ## Instructiuni folosire repository:
