@@ -2,8 +2,12 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
+<<<<<<< HEAD
 #include <stdio.h>
 #include <math.h>
+=======
+#include<stdio.h>
+>>>>>>> main
 
 void unghiuri(float lat[], float ung[]) {
     ung[0] = acos((lat[0] * lat[0] + lat[1] * lat[1] - lat[2] * lat[2]) / (2 * lat[1] * lat[0])) * (180 / M_PI);

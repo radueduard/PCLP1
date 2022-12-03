@@ -2,7 +2,7 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
-#include <stdio.h>
+#include<stdio.h>
 
 void transforma(int v[], int n, int x) {
     int stanga = 0, dreapta = n - 1, aux;

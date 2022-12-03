@@ -1,4 +1,5 @@
 #include <stdio.h>
+<<<<<<< HEAD
 #include <limits.h>
 
 void panta(int x1, int y1, int x2, int y2, float *m, float *n){
@@ -24,4 +25,11 @@ int main(){
     else printf("DA");
     return 0;
 
+=======
+
+int main()
+{
+    puts("Hello World!");
+    return 0;
+>>>>>>> main
 }

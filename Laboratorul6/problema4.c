@@ -2,8 +2,12 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
+<<<<<<< HEAD
 #include <stdio.h>
 #include <string.h>
+=======
+#include<stdio.h>
+>>>>>>> main
 
 int compar(char v1[], char v2[])
 {

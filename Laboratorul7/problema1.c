@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include<stdio.h>
 
 void swap(int *pa, int *pb){
@@ -14,5 +15,12 @@ int main()
     scanf("%d%d", &a, &b);
     swap(&a, &b);
     printf("%d %d", a, b);
+=======
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello world\n");
+>>>>>>> main
     return 0;
 }

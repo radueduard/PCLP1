@@ -1,4 +1,5 @@
 #include <stdio.h>
+<<<<<<< HEAD
 #include <string.h>
 
 char* substr(char *src, int n, char *dest){
@@ -12,5 +13,11 @@ int main(){
     scanf("%s%d%d", s1, &pozitie, &lungime);
     substr(s1 + pozitie, lungime, s2 );
     printf("%s ", s2);
+=======
+
+int main()
+{
+    printf("hello world\n");
+>>>>>>> main
     return 0;
 }
