@@ -14,6 +14,7 @@ char *strins(char *p, char *s) {
 }
 void inserare(char *text, char *s1, char *s2)
 {
+<<<<<<< HEAD
     int OK,i,j,n=0,p,a[100],b[100],m;
     char t[1000];
     for(i=1;i<=99;i++)
@@ -61,5 +62,8 @@ int main()
     scanf("%[^\n]s",b);
     getchar();
     inserare(s,a,b);
+=======
+    printf("Hello world\n");
+>>>>>>> main
     return 0;
 }
