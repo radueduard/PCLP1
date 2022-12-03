@@ -2,6 +2,7 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
+<<<<<<< HEAD
 #include <stdio.h>
 void swap(int *x,int *y){
     int aux;
@@ -28,6 +29,10 @@ void transforma(int v[],int n,int x){
             v[i]=a[i];
         }
 }
+=======
+#include<stdio.h>
+
+>>>>>>> main
 int main()
 {
     int v[100],n,i,x;

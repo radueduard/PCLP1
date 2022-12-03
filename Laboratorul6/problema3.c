@@ -2,6 +2,7 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
+<<<<<<< HEAD
 #include <stdio.h>
 int search(int v[],int x,int n){
     int i;
@@ -22,6 +23,10 @@ int ex(int a[],int n,int b[],int m,int c[]){
     }
     return j;
 }
+=======
+#include<stdio.h>
+
+>>>>>>> main
 int main()
 {
     int a[1000],b[1000],c[1000],i,j,nr,n,m;

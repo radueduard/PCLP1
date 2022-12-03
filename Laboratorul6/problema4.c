@@ -2,6 +2,7 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
+<<<<<<< HEAD
 #include <stdio.h>
 #include <string.h>
 int comp(char sir1[],char sir2[]){
@@ -16,6 +17,10 @@ int comp(char sir1[],char sir2[]){
     else if(l1<l2) return 1;
          else return -1;
 }
+=======
+#include<stdio.h>
+
+>>>>>>> main
 int main()
 {
     char s1[100],s2[100];

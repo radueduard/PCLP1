@@ -2,6 +2,7 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
+<<<<<<< HEAD
 #include <stdio.h>
 void swap(int *x,int *y){
     int aux;
@@ -20,6 +21,9 @@ void sort(int v[], int n){
             }
         }
     }while(ok==0);
+=======
+#include<stdio.h>
+>>>>>>> main
 
 }
 int main()

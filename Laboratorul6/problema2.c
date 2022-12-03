@@ -2,12 +2,16 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
+<<<<<<< HEAD
 #include <stdio.h>
 #include <math.h>
 void ung1(double laturi[],double unghiuri[]){
     unghiuri[0]=acos((laturi[1]*laturi[1]+laturi[2]*laturi[2]-laturi[0]*laturi[0])/(2*laturi[1]*laturi[2]))*180/M_PI;
     unghiuri[1]=acos((laturi[0]*laturi[0]+laturi[2]*laturi[2]-laturi[1]*laturi[1])/(2*laturi[0]*laturi[2]))*180/M_PI;
     unghiuri[2]=acos((laturi[1]*laturi[1]+laturi[0]*laturi[0]-laturi[2]*laturi[2])/(2*laturi[1]*laturi[0]))*180/M_PI;
+=======
+#include<stdio.h>
+>>>>>>> main
 
 }
 void ung2(double lx,double ly,double lz,double *ux,double *uy,double *uz){

@@ -2,7 +2,7 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
-#include <stdio.h>
+#include<stdio.h>
 
 void spirala (int a[][100], int m, int n, int v[]){
     int i,j,nr,k,d;
@@ -39,6 +39,7 @@ void afisare(int v[],int dim){
 }
 int main()
 {
+<<<<<<< HEAD
     int A[100][100],i,j,n,m,v[100];
     scanf("%d%d",&n,&m);
     for(i=0;i<n;i++){
@@ -49,4 +50,8 @@ int main()
     spirala(A,m,n,v);
     afisare(v,n*m);
 
+=======
+	puts("Hello World!");
+	return 0;
+>>>>>>> main
 }
