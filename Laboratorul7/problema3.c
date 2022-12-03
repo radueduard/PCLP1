@@ -19,11 +19,15 @@ char *strins(char *p, char *s) {
 
 int main()
 {
+<<<<<<< HEAD
     char text[3001], sirDeInlocuit[21], sirCuCareSeInlocuieste[21];
     fgets(text, 3001, stdin);
     text[strlen(text) - 1] = 0;
     fgets(sirDeInlocuit, 21, stdin);
     fgets(sirCuCareSeInlocuieste, 21, stdin);
     puts(text);
+=======
+    printf("Hello world\n");
+>>>>>>> main
     return 0;
 }

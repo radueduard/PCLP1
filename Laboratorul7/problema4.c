@@ -17,11 +17,15 @@ char* substr(char *src, int n, char *dest) {
 
 int main()
 {
+<<<<<<< HEAD
     char sir[101], dest[101];
     int start, end;
     fgets(sir, 101, stdin);
     scanf("%d%d", &start, &end);
     substr(sir + start, end, dest);
     puts(dest);
+=======
+    printf("hello world\n");
+>>>>>>> main
     return 0;
 }

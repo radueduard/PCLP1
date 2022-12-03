@@ -13,6 +13,7 @@ void count(int n, int *v, int *zero, int *poz, int *neg) {
 
 int main()
 {
+<<<<<<< HEAD
     int *v, n, zero, poz, neg;
     scanf("%d", &n);
     v = malloc(n * sizeof(int));
@@ -23,5 +24,8 @@ int main()
     printf("pozitive: %d\n", poz);
     printf("negative: %d\n", neg);
     free(v);
+=======
+    printf("Hello world\n");
+>>>>>>> main
     return 0;
 }
