@@ -2,6 +2,7 @@
 #include <string.h>
 char* substr(char *src, int n, char *dest)
 {
+<<<<<<< HEAD
     strncpy(dest,src,n);
 }
 int main()
@@ -13,5 +14,8 @@ scanf("%d%d",&poz,&n);
 substr(sir1+poz,n,sir2);
 printf("%s",sir2);
     
+=======
+    printf("hello world\n");
+>>>>>>> main
     return 0;
 }

@@ -25,6 +25,7 @@ char *p;
 p=strstr(s,sir);
 while(p!=-1)
 {
+<<<<<<< HEAD
     char aux[1001];
     strdel(s+(s-p),strlen(sir)-1);
     strins(s+(s-p),sir2);
@@ -32,5 +33,8 @@ while(p!=-1)
 }
 printf("%s", s);
     
+=======
+    printf("Hello world\n");
+>>>>>>> main
     return 0;
 }

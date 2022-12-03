@@ -8,10 +8,14 @@ void swap(int *pa, int *pb)
 }
 int main()
 {
+<<<<<<< HEAD
     int a, b;
     scanf("%d%d", &a, &b);
     swap(&a, &b);
     printf("%d %d", a, b);
 
+=======
+    printf("Hello world\n");
+>>>>>>> main
     return 0;
 }

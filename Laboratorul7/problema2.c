@@ -17,6 +17,7 @@ void count(int n, int *v,int *zero,int *poz,int *neg)
 
 }
 int main()
+<<<<<<< HEAD
 {int n,v[101],z,p,neg;
 scanf("%d", &n);
 int i;
@@ -25,5 +26,9 @@ for(i=0;i<n;i++)
 count(n,v,&z,&p,&neg);
 printf(" nule : %d \n pozitive : %d \n negative : %d",z,p,neg);
    
+=======
+{
+    printf("Hello world\n");
+>>>>>>> main
     return 0;
 }
