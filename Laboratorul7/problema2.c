@@ -19,5 +19,6 @@ int main()
     int zero = 0, poz = 0, neg = 0;
     count(n, v, &zero, &poz, &neg);
     printf("nule: %d\npozitive: %d\nnegative: %d\n", zero, poz, neg);
+
     return 0;
 }

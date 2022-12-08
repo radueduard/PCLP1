@@ -94,6 +94,5 @@ int main() {
         printf("%s\n", string);
         free(string);
     }
-
     return 0;
 }

@@ -21,6 +21,5 @@ int main() {
         printf("%d ", v[i]);
 
     free(v);
-
     return 0;
 }

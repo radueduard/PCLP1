@@ -13,5 +13,6 @@ int main()
     scanf("%d%d", &n1, &n2);
     substr(s + n1, n2, dest);
     printf("%\n", dest);
+
     return 0;
 }
