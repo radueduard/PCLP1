@@ -30,6 +30,9 @@ int main ()
 }
 ```
 
+## ***Implementare:***
+[problema_rezolvata.c](./problema_rezolvata.c)
+
 # Probleme
 
 ## **Problema 1**
@@ -60,6 +63,8 @@ O singura linie care contine sirul initial `s` in care toate aparitiile lui `s1`
 |:-------------------------------------|:--------------------------|
 | imi nu-mi<br>mie imi plac pointerii  | mie nu-mi plac pointerii  |
 
+## ***Implementare:***
+[problema1.c](./problema1.c)
 
 ## **Problema 2**
 
@@ -91,88 +96,105 @@ Pe prima linie se va afla sirul initial de numere introduse.
 | Intrare                                  | Ieşire                                 |
 |:-----------------------------------------|:---------------------------------------|
 | 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 0 | 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 |
-Problema 3
+
+## ***Implementare:***
+[problema2.c](./problema2.c)
+
+## **Problema 3**
 
 Să se scrie un program pentru citirea unor cuvinte (de la tastatură) şi afişarea numărului de apariţii ale fiecărui cuvânt. Cuvintele au maxim 19 litere fiecare.
 
 Se va folosi un vector de pointeri la cuvinte şi un vector de numere întregi. Variante:
 
-Cei doi vectori au o dimensiune maximă şi nu se mai extind.
-Cei doi se alocă şi se extind dinamic (se realocă dacă este nevoie).
-Date de intrare
+- Cei doi vectori au o dimensiune maximă şi nu se mai extind.
+- Cei doi se alocă şi se extind dinamic (se realocă dacă este nevoie).
 
-Pe prima linie din fisierul de intrare se va afla un numar natural n ce reprezinta numarul de cuvinte din fisier.
+## ***Date de intrare:***
 
-Pe urmatoarele linii se vor afla cele n cuvinte ce urmeaza a fi citite.
+- Pe prima linie din fisierul de intrare se va afla un numar natural `n` ce reprezinta numarul de cuvinte din fisier.
+- Pe urmatoarele linii se vor afla cele n cuvinte ce urmeaza a fi citite.
 
-Date de ieşire
+## ***Date de ieşire:***
 
-Fisierul de iesire va contine pe fiecare linie cate o pereche de forma “cuvant numar_aparitii”.
+- Fisierul de iesire va contine pe fiecare linie cate o pereche de forma “cuvant numar_aparitii”.
+- Cuvintele trebuie afişate în ordinea în care au fost găsite în fişierul de intrare.
 
-Cuvintele trebuie afişate în ordinea în care au fost găsite în fişierul de intrare.
+## ***Restrictii si Precizari:***
 
-Restrictii si Precizari
+n <= 1000
 
-n ⇐ 1000
-Exemplu
+## ***Exemplu:***
 
-Intrare	Ieşire
-6 
-ana are 
-mere are mere mere	ana 1 
-are 2 
-mere 3
-Problema 4
+| Intrare                            | Ieşire                   |
+|:-----------------------------------|:-------------------------|
+| 6<br>ana are<br>mere are mere mere | ana 1<br>are 2<br>mere 3 |
 
-Să considerăm următoarea problemă: dorim să calculăm C(n,k) folosind relaţia de recurenţă:
+## ***Implementare:***
+[problema3.c](./problema3.c)
 
-C(n,k) = C(n-1,k) + C(n-1,k-1)
+## **Problema 4**
 
-Să considerăm că am ales să rezolvăm problema în următorul mod: definim o matrice c de dimensiuni suficient de mari, în care elementul c[i][j] reprezintă valoarea C(i,j). Vom iniţializa linia 1 a matricei (C(1,0) = C(1,1) = 1) şi vom calcula, pe rând, aplicând relaţia de recurenţă, valorile C(i,j) până când am obţinut valoarea cerută de problemă: C(n,k).
+Să considerăm următoarea problemă: dorim să calculăm `C(n,k)` folosind relaţia de recurenţă:
 
-Acest algoritm rezolvă problema, dar prezintă un dezavantaj. Pentru calculul unei valori, trebuie păstrată în memorie o matrice de dimensiuni relativ mari, care ocupă multă memorie. În plus, observăm că pentru a calcula C(i,j), care se va afla pe linia i în matrice, avem nevoie doar de valori de pe linia i-1. Astfel, putem aduce o economie de memorie majoră în program dacă în loc să păstrăm întreaga matrice în memorie, păstrăm doar doi vectori vim1[] şi vi[] care să reprezinte liniile i-1, respectiv i din matrice.
+> C(n,k) = C(n-1,k) + C(n-1,k-1)
+
+Să considerăm că am ales să rezolvăm problema în următorul mod: definim o matrice `c` de dimensiuni suficient de mari, în care elementul `c[i][j]` reprezintă valoarea C(i,j). Vom iniţializa linia 1 a matricei (C(1,0) = C(1,1) = 1) şi vom calcula, pe rând, aplicând relaţia de recurenţă, valorile `C(i,j)` până când am obţinut valoarea cerută de problemă: `C(n,k)`.
+
+Acest algoritm rezolvă problema, dar prezintă un dezavantaj. Pentru calculul unei valori, trebuie păstrată în memorie o matrice de dimensiuni relativ mari, care ocupă multă memorie. În plus, observăm că pentru a calcula `C(i,j)`, care se va afla pe linia i în matrice, avem nevoie doar de valori de pe linia i-1. Astfel, putem aduce o economie de memorie majoră în program dacă în loc să păstrăm întreaga matrice în memorie, păstrăm doar doi vectori `vim1[]` şi `vi[]` care să reprezinte liniile i-1, respectiv i din matrice.
 
 Avem acum două optiuni:
 
-După terminarea calulului valorilor de pe o linie, în vectorul vi[], putem să le copiem pe toate în vectorul vim1[] şi să continuăm calculul următoarei linii în vi[]. Această metodă, însă, presupune ca după fiecare linie să copiem “n” elemente dintr-un vector în altul, şi introduce un cost de eficienţă inutil (ceea ce am economisit la capitolul memorie, irosim la capitolul rapiditate a programului).
-Metoda mai rapidă şi mai elegantă este ca, în loc să copiem conţinutul lui vi[] în vim1[], să interschimbăm doar variabilele de tip pointer care indică către începutul acestor şiruri. Altfel spus, nu mutăm efectiv valorile prin memorie, ci doar le interschimbăm “rolul”. În acest mod, se efectuează în loc de mutarea a “n” elemente, doar cele trei instrucţiuni ale interschimbării de variabilă.
-Să se scrie un program care calculează valoarea lui C(n,k) prin metoda descrisă mai sus, reducând matricea la doi vectori, şi schimbând după fiecare pas, rolul jucat de aceşti doi vectori.
+- După terminarea calulului valorilor de pe o linie, în vectorul `vi[]`, putem să le copiem pe toate în vectorul `vim1[]` şi să continuăm calculul următoarei linii în vi[]. Această metodă, însă, presupune ca după fiecare linie să copiem “n” elemente dintr-un vector în altul, şi introduce un cost de eficienţă inutil (ceea ce am economisit la capitolul memorie, irosim la capitolul rapiditate a programului).
+- Metoda mai rapidă şi mai elegantă este ca, în loc să copiem conţinutul lui `vi[]` în `vim1[]`, să interschimbăm doar variabilele de tip pointer care indică către începutul acestor şiruri. Altfel spus, nu mutăm efectiv valorile prin memorie, ci doar le interschimbăm “rolul”. În acest mod, se efectuează în loc de mutarea a “n” elemente, doar cele trei instrucţiuni ale interschimbării de variabilă.
 
-Date de intrare
+Să se scrie un program care calculează valoarea lui `C(n,k)` prin metoda descrisă mai sus, reducând matricea la doi vectori, şi schimbând după fiecare pas, rolul jucat de aceşti doi vectori.
 
-Pe o singura linie se vor afla cele 2 valori n si k.
+## ***Date de intrare:***
 
-Date de ieşire
+Pe o singura linie se vor afla cele 2 valori `n` si `k`.
 
-Pe prima linie din fisierul de iesire se va afisa valoarea C(n, k).
+## ***Date de ieşire:***
 
-Restrictii si Precizari
+Pe prima linie din fisierul de iesire se va afisa valoarea `C(n, k)`.
 
-0 ≤ k ≤ n ≤ 25
-Exemplu
+## ***Restrictii si Precizari:***
 
-Intrare	Ieşire
-5 3	10
-Problema 5
+- 0 <= k <= n <= 25
+
+## ***Exemplu:***
+
+| Intrare | Ieşire |
+|:--------|--------|
+| 5 3     | 10     |
+
+## ***Implementare:***
+[problema4.c](./problema4.c)
+
+## **Problema 5**
 
 Se citesc de la tastatură cuvinte separate prin câte un spatiu alb. Pornind de la cuvintele citite, se construieşte un şir de caractere după următoarele reguli:
 
-Primul cuvânt citit se adaugă la şirul de caractere;
-Fiecare din următoarele cuvinte citite se adaugă la şirul de caractere dacă ultimele două litere ale ultimului cuvânt din şir coincid cu primele două litere ale cuvântului curent (nu se face distincţie între literele mici şi cele mari);
-Cuvintele adăugate la şirul de caractere sunt despărţite de caracterul ’-’.
-Date de intrare
+- Primul cuvânt citit se adaugă la şirul de caractere;
+- Fiecare din următoarele cuvinte citite se adaugă la şirul de caractere dacă ultimele două litere ale ultimului cuvânt din şir coincid cu primele două litere ale cuvântului curent (nu se face distincţie între literele mici şi cele mari);
+- Cuvintele adăugate la şirul de caractere sunt despărţite de caracterul ’-’.
+
+## ***Date de intrare:***
 
 Pe prima linie din fişierul de intrare se va afla un numar natural n reprezentand numarul de cuvinte din fisier. Pe urmatoarea linie se afla cele n cuvinte separate prin cate un spatiu.
 
-Date de ieşire
+## ***Date de ieşire:***
 
 O singura linie ce reprezinta cuvintele din sirul separate prin cate un '-' si care respecta ordinea din cerinta.
 
-Restrictii si Precizari
+## ***Restrictii si Precizari:***
 
-n ⇐ 100
-Exemplu
+- n <= 100
 
-Intrare	Ieşire
-5 
-abC def bcFr ty froop	abC-bcfR-froop
+## ***Exemplu:***
+
+| Intrare                    | Ieşire         |
+|:---------------------------|:---------------|
+| 5<br>abC def bcFr ty froop | abC-bcfR-froop |
+
+## ***Implementare:***
+[problema5.c](./problema5.c)
