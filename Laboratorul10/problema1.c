@@ -1,26 +1,25 @@
 #include <stdio.h>
 #include <math.h>
-int adn(int a,int b){
-    return a+b;
-}
-int scd(int a,int b){
-    return a-b;
-}
-int inm(int a,int b){
-    return a*b;
-}
-int mare(int a,int b,int(*func)(int a,int b)){
-    return func(a,b);
-}
-double integrala(double(*func)(double x),double a,double b,int n){
 
+double integrala (double (*func) (double x), double a, double b, int n)
+{
+    double surface = 0;
+    double PAS;
+    PAS = (b - a) / n;
+    for (double i = a + PAS; i <= b; i = i + PAS)
+    {
+        surface = surface + ( (func (i - PAS) + func (i)) * PAS / 2 );
+    }
+    return surface;
 }
+
 int main() {
-    int (*operatii[3])(int,int)={adn,scd,inm};
-    printf("%d\n",mare(7,5,operatii[0]));
-    printf("%d\n",mare(7,5,operatii[1]));
-    printf("%d\n",mare(7,5,operatii[2]));
 
+    double a, b;
+    int n;
+    scanf("%lf%lf%d", &a, &b, &n);
+
+    printf("%lf\n%lf\n", integrala(sin, a, b, n), integrala(cos, a, b, n));
 
     return 0;
 }
