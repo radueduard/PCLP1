@@ -12,7 +12,7 @@ complex adunare(complex a, complex b){
     return z;
 }
 
-complex adunare(complex a, complex b){
+complex scadere(complex a, complex b){
     complex z;
     z.re = a.re - b.re;
     z.im = a.im - b.im;
@@ -52,7 +52,7 @@ int main()
     scanf("%f", &x.im);
     p.re = 0;
     p.im = 0;
-    for(int i = 0; i <= n; i++){
+    for(int i = 0; i <= grad; i++){
        z.im = 0;
        z.re = c[i];
        p = adunare(p, inmultire(z, putere(x, i)));
