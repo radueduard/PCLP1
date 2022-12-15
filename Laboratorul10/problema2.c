@@ -4,7 +4,19 @@
 
 #include <stdio.h>
 
-int main() {
-	puts("Hello World!");
-	return 0;
+struct multime {
+    unsigned char a;
+};
+
+void init(struct multime *m){
+    m - >a = 0;
 }
+
+void add(struct multime *m, int x){
+    m -> a = m -> a;
+}
+
+void print(struct multime *m){
+
+}
+
