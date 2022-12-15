@@ -7,6 +7,7 @@
 7. [Functii cu pointeri; Siruri de caractere](Laboratorul7/README.md)
 8. [Alocare Dinamica](Laboratorul8/README.md)
 9. [Structuri - Enumerări - Uniuni](Laboratorul9/README.md)
+10. [Pointeri la funcţii. Operatori pe biţi](Laboratorul10/README.md)
 
 
 ## Instructiuni folosire repository:
