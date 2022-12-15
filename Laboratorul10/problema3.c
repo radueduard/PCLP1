@@ -1,10 +1,10 @@
-//
-// Created by Eduard Andrei Radu on 09.11.2022.
-//
-
 #include <stdio.h>
+struct MATERIA{
+    char nume[15];
+    int ore_curs;
 
+};
 int main() {
-	puts("Hello World!");
+
 	return 0;
 }
