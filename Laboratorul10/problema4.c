@@ -54,20 +54,33 @@ matrice* aduna_MATRICE(matrice* ma, matrice* mb){
     }
 }
 
-MATRICE* inmulteste_MATRICE(MATRICE* ma, MATRICE* mb){
-    matrice *inmultire;
-    n = mb -> (m - 1);
-    if (ma -> m != mb -> n)
-        return NULL;
-    else{
-        inmultire = creeaza_MATRICE(mb -> n , mb -> m);
-        for(int i = 0; i -> inmultire -> )
-    }
-
+MATRICE* inmulteste_MATRICE(MATRICE * ma, MATRICE * mb)
+{
+    if(ma->m != mb->n) return NULL;
+    MATRICE  *mc = creeaza_MATRICE(ma->n, mb->m);
+    for(int i = 0; i < mc->n; i++)
+        for(int j = 0; j < mc->m; j++)
+        {
+            mc->a[i][j] = 0;
+            int row = i;
+            int col = j;
+            for(int k = 0; k < ma->m; k++)
+                mc->a[i][j] = mc->a[i][j] + ma->a[row][k] * mb->a[k][col];
+        }
+    return mc;
 }
-
-
 
 int main() {
 
-}
+    int n_a, m_a, n_b, m_b;
+    scanf("%d%d", &n_a, &m_a);
+    MATRICE * ma = creeaza_MATRICE(n_a, m_a);
+    citeste_MATRICE(ma);
+    scanf("%d%d", &n_b, &m_b);
+    MATRICE * mb = creeaza_MATRICE(n_b, m_b);
+    citeste_MATRICE(mb);
+
+    MATRICE * md = inmulteste_MATRICE(ma, mb);
+    scrie_MATRICE(md);
+
+    retu
