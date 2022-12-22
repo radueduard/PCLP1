@@ -1,7 +1,14 @@
 #include <stdio.h>
+#include<time.h>
+
+char* timestr(struct tm t, char* time){
+    
+}
 
 int main()
 {
-    printf("Hello world\n");
-    return 0;
+    time_t timp;
+    struct tm *area;
+    timp=time(&timp);
+    area=localtime(&timp);
 }
