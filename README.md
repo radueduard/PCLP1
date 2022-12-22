@@ -8,6 +8,7 @@
 8. [Alocare Dinamica](Laboratorul8/README.md)
 9. [Structuri - Enumerări - Uniuni](Laboratorul9/README.md)
 10. [Pointeri la funcţii. Operatori pe biţi](Laboratorul10/README.md)
+11. [Laboratorul 11. Fişiere text. Argumente în linia de comandă](Laboratorul11/README.md)
 
 
 ## Instructiuni folosire repository:
