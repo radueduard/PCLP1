@@ -3,8 +3,20 @@
 //
 
 #include <stdio.h>
+#include <string.h>
+#define BUFMAX 1005
 
-int main() {
-	puts("Hello World!");
-	return 0;
+int main(int argc, char** argv)
+{
+	FILE* pFile;
+	char buffer[BUFMAX];
+
+	pFile = fopen("input.txt", "r");
+	if (pFile == NULL)
+		printf("Nu s-a putut deschide fisierul");
+	while (fgets(buffer, BUFMAX, pFile) != NULL) {
+			if(strstr(buffer,argv[2]))
+            printf("%s",buffer);
+	}
+	fclose(pFile);
 }
