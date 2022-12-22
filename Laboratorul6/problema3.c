@@ -2,6 +2,7 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
+<<<<<<< HEAD
 #include <stdio.h>
 
 void f(int a[], int b[], int n, int m, int c[]);
@@ -67,4 +68,12 @@ void f(int a[], int b[], int n, int m, int c[])
     for (int i = 0;i < p;i++)
         printf("%d ", c[i]);
     printf("\n");
+=======
+#include<stdio.h>
+
+int main()
+{
+    puts("Hello World!");
+    return 0;
+>>>>>>> main
 }

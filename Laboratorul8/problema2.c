@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -19,4 +20,12 @@ int main()
 	for (int i = 0; i < n; i++)
 		printf("%d ", v[i]);
 	printf("\n");
+=======
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello world\n");
+    return 0;
+>>>>>>> main
 }

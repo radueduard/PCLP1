@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+<<<<<<< HEAD
 void swap(int* pa, int* pb)
 {
     int x;
@@ -16,3 +17,10 @@ int main()
     printf("%d %d", a, b);
     return 0;
 }
+=======
+int main()
+{
+    printf("Hello world\n");
+    return 0;
+}
+>>>>>>> main

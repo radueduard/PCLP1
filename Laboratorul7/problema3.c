@@ -1,4 +1,5 @@
 #include <stdio.h>
+<<<<<<< HEAD
 #include <string.h>
 #include <stdlib.h>
 
@@ -42,3 +43,11 @@ char* strins(char* p, char* s)
     return p;
     free(q);
 }
+=======
+
+int main()
+{
+    printf("Hello world\n");
+    return 0;
+}
+>>>>>>> main

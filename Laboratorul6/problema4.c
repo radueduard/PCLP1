@@ -2,6 +2,7 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
+<<<<<<< HEAD
 #include <stdio.h>
 
 int f(char a[], char b[]);
@@ -44,4 +45,12 @@ int f(char a[], char b[])
         else
             return 0;
     }
+=======
+#include<stdio.h>
+
+int main()
+{
+    puts("Hello World!");
+    return 0;
+>>>>>>> main
 }

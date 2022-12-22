@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -28,3 +29,12 @@ char* my_replace(char* s, char* s1, char* s2)
 	strncat(p, s, y);
 	return p;
 }
+=======
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello world\n");
+    return 0;
+}
+>>>>>>> main

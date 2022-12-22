@@ -1,4 +1,5 @@
 #include <stdio.h>
+<<<<<<< HEAD
 #include <stdlib.h>
 
 void count(int n, int* v, int* zero, int* poz, int* neg);
@@ -33,4 +34,11 @@ void count(int n, int* v, int* zero, int* poz, int* neg)
                 (*zero)++;
         }
     }
+=======
+
+int main()
+{
+    printf("Hello world\n");
+    return 0;
+>>>>>>> main
 }

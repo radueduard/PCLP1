@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 # Programarea Calculatoarelor si Limbaje de Programare 1 - LABORATOR
 
@@ -68,6 +69,8 @@ make clean
 
 > Sterge toate fisierele executabile (sau care nu au extensii cu exceptia lui Makefile)
 =======
+=======
+>>>>>>> main
 # Programarea Calculatoarelor si Limbaje de Programare 1 - LABORATOR
 
 ## Cuprins:
@@ -76,6 +79,11 @@ make clean
 6. [Funcții cu vectori](Laboratorul6/README.md)
 7. [Functii cu pointeri; Siruri de caractere](Laboratorul7/README.md)
 8. [Alocare Dinamica](Laboratorul8/README.md)
+<<<<<<< HEAD
+=======
+9. [Structuri - Enumerări - Uniuni](Laboratorul9/README.md)
+10. [Pointeri la funcţii. Operatori pe biţi](Laboratorul10/README.md)
+>>>>>>> main
 
 
 ## Instructiuni folosire repository:
@@ -137,4 +145,7 @@ make clean
 ```
 
 > Sterge toate fisierele executabile (sau care nu au extensii cu exceptia lui Makefile)
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> main

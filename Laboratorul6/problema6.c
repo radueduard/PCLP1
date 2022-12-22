@@ -4,9 +4,6 @@
 
 #include<stdio.h>
 
-void spirala(int A[][100], int m, int n, int V[]);
-void afisare(int V[], int dim);
-
 int main()
 {
 	int A[100][100], m, n, V[100];

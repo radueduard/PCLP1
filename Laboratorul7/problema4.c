@@ -1,4 +1,5 @@
 #include <stdio.h>
+<<<<<<< HEAD
 #include <string.h>
 
 char* substr(char* src, int n, char* dest);
@@ -24,3 +25,11 @@ char* substr(char* src, int n, char* dest)
     strcpy(dest, src);
     printf("%s", dest);
 }
+=======
+
+int main()
+{
+    printf("hello world\n");
+    return 0;
+}
+>>>>>>> main

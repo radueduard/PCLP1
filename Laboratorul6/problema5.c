@@ -2,9 +2,7 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
-#include <stdio.h>
-
-void transform(int v[], int n, int x);
+#include<stdio.h>
 
 int main()
 {

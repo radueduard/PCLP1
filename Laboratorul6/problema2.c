@@ -2,6 +2,7 @@
 // Created by Eduard Andrei Radu on 10.11.2022.
 //
 
+<<<<<<< HEAD
 #define _USE_MATH_DEFINES
 #include <stdio.h>
 #include<math.h>
@@ -50,3 +51,12 @@ void f2(float x, float y, float z, float* a, float* b, float* c)
     *b = (180 / M_PI) * asin(y / (2 * r));
     *c = (180 / M_PI) * asin(z / (2 * r));
 }
+=======
+#include<stdio.h>
+
+int main()
+{
+    puts("Hello World!");
+    return 0;
+}
+>>>>>>> main
