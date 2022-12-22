@@ -7,6 +7,13 @@
 5. [Definire și utilizare funcții](Laboratorul5/README.md)
 6. [Funcții cu vectori](Laboratorul6/README.md)
 7. [Functii cu pointeri; Siruri de caractere](Laboratorul7/README.md)
+<<<<<<< HEAD
+=======
+8. [Alocare Dinamica](Laboratorul8/README.md)
+9. [Structuri - Enumerări - Uniuni](Laboratorul9/README.md)
+10. [Pointeri la funcţii. Operatori pe biţi](Laboratorul10/README.md)
+11. [Laboratorul 11. Fişiere text. Argumente în linia de comandă](Laboratorul11/README.md)
+>>>>>>> main
 
 
 ## Instructiuni folosire repository:
