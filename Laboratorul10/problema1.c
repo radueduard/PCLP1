@@ -3,6 +3,9 @@
 //
 
 #include <stdio.h>
+double integrala(double (*func)(double x), double a, double b, int n){
+	
+}
 
 int main() {
 	puts("Hello World!");
