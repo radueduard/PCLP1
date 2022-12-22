@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define MAX 20
+
 typedef struct{
 	char nume[15];
 	int ore_curs;
@@ -22,9 +24,17 @@ void citire_MAT(MATERIA *m)
 	}
 }
 
+void citire_PROGRAMA(MATERIA PROGRAMA[], int n)
+{
+
+}
+
 int main()
 {
-	MATERIA m;
-	citire_MAT(&m);
+	MATERIA PROGRAMA[MAX];
+	int n;
+	printf("Numarul de materii: ");
+	scanf("%d", &n);
+	citire_PROGRAMA(PROGRAMA, n);
 
 }
