@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 #include <math.h>
 #include <stdio.h>
+=======
+//
+// Created by Eduard Andrei Radu on 10.11.2022.
+//
+
+#include<stdio.h>
+>>>>>>> main
 
 void triangle_angles(float a[3], float b[3]) {
   b[0] =

@@ -5,7 +5,7 @@ all: $(patsubst %.c,%,$(wildcard *.c))
 
 run: $(TARGET)
 	./$(TARGET)
-	
+
 $(TARGET): $(TARGET).o
 	$(CC) $(CFLAGS) -o $(TARGET) $^
 
