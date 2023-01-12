@@ -21,6 +21,7 @@ void afisare_ecran(char *nume_fisier) {
   FILE *file = fopen(nume_fisier, "rb");
 
   fread(produse, sizeof(Produs), PRODUCTS, file);
+  fclose(file);
 
   for (i = 0; i < PRODUCTS; i++) {
     printf("%s %d %lf\n", produse[i].nume_produs, produse[i].cantitate,
@@ -51,6 +52,7 @@ int find(char *name_product, char *nume_fisier) {
   FILE *file = fopen(nume_fisier, "rb");
 
   fread(produse, sizeof(Produs), PRODUCTS, file);
+  fclose(file);
 
   for (i = 0; i < PRODUCTS; i++) {
     if (strcmp(produse[i].nume_produs, name_product) == 0) {
