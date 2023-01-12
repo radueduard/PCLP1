@@ -4,48 +4,61 @@
 
 #define N 4
 
-typedef struct Persoana {
-	char* nume;
-	char* prenume;
+typedef struct Persoana
+{
+	char *nume;
+	char *prenume;
 } Persoana;
 
-void serializeaza(Persoana v[], int nrPersoane, char* fileName)
+void serializeaza(Persoana v[], int nrPersoane, char *fileName)
 {
-	FILE* f = fopen(fileName, "wb");
-
-	//TODO! Adauga codul de serializare: ~10 linii
-
+	FILE *f = fopen(fileName, "wb");
+	for (int i = 0; i < nrPersoane; i++)
+	{
+		int dimNume = strlen(v[i].nume);
+		int dimPrenume = strlen(v[i].prenume);
+		fwrite(&dimNume, 4, 1, f);
+		fwrite(&dimPrenume, 4, 1, f);
+	}
+	for (int i = 0; i < nrPersoane; i++)
+	{
+		fwrite(v[i].nume, sizeof(char), strlen(v[i].nume), f);
+		fwrite(v[i].prenume, sizeof(char), strlen(v[i].prenume), f);
+	}
 	fclose(f);
 }
-
-void deserializeaza(Persoana v[], int nrPersoane, char* fileName)
+void deserializeaza(Persoana v[], int nrPersoane, char *fileName)
 {
-	FILE* f = fopen(fileName, "rb");
-
-	//TODO! Adauga codul de deserializare: ~10 linii
-
-	fclose(f);
-}
-
-int main()
-{
-	Persoana v[N], w[N];
-	char* prenume[N] = { "Eric", "Kyle", "Stan", "Kenny" };
-	char* nume[N] = { "Cartman", "Broflovski", "Marsh", "McCormick" };
-	int i;
-	for (i = 0; i < N; i++) {
-		v[i].nume = nume[i];
-		v[i].prenume = prenume[i];
+	FILE *f = fopen(fileName, "rb");
+	for (int i = 0; i < nrPersoane; i++)
+	{
+		int dimNume, dimPrenume;
+		fread(&dimNume, 4, 1, f);
+		fread(&dimPrenume, 4, 1, f);
+		v[i].nume = (char *)malloc(sizeof(char) * (dimNume + 1));
+		v[i].prenume = (char *)malloc(sizeof(char) * (dimPrenume + 1));
 	}
+	int main()
+	{
+		Persoana v[N], w[N];
+		char *prenume[N] = {"Eric", "Kyle", "Stan", "Kenny"};
+		char *nume[N] = {"Cartman", "Broflovski", "Marsh", "McCormick"};
+		int i;
+		for (i = 0; i < N; i++)
+		{
+			v[i].nume = nume[i];
+			v[i].prenume = prenume[i];
+		}
 
-	// Serializam vectorul intr-un fisier
-	serializeaza(v, N, "persoane.bin");
-	// Deserializam in alt vector, din acelasi fisier. Ar trebui sa obtinem aceleasi informatii.
-	deserializeaza(w, N, "persoane.bin");
+		// Serializam vectorul intr-un fisier
+		serializeaza(v, N, "persoane.bin");
+		// Deserializam in alt vector, din acelasi fisier. Ar trebui sa obtinem aceleasi informatii.
+		deserializeaza(w, N, "persoane.bin");
 
-	for (i = 0; i < N; i++) {
-		printf("%s %s\n", w[i].prenume, w[i].nume);
+		for (i = 0; i < N; i++)
+		{
+			printf("%s %s\n", w[i].prenume, w[i].nume);
+		}
+
+		return 0;
 	}
-
-	return 0;
-}
