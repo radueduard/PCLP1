@@ -12,8 +12,20 @@ typedef struct Persoana {
 void serializeaza(Persoana v[], int nrPersoane, char* fileName)
 {
 	FILE* f = fopen(fileName, "wb");
+	int i, dim;
+	char str[1024];
+	for(i=0; i< nrPersoane; i++)
+	{
+		dim = strlen(v[i].prenume);
+		fwrite(&dim, 1, sizeof(dim), f);
+		strcpy(str, v[i].prenume);
+		fwrite(str, 1, dim, f);
 
-	//TODO! Adauga codul de serializare: ~10 linii
+		dim = strlen(v[i].nume); 
+		fwrite(&dim, 1, sizeof(dim), f); 
+		strcpy(str, v[i].nume);
+		fwrite(str, 1, dim, f);
+	}
 
 	fclose(f);
 }
@@ -21,9 +33,20 @@ void serializeaza(Persoana v[], int nrPersoane, char* fileName)
 void deserializeaza(Persoana v[], int nrPersoane, char* fileName)
 {
 	FILE* f = fopen(fileName, "rb");
-
-	//TODO! Adauga codul de deserializare: ~10 linii
-
+	int i, dim;
+	char str[1024];
+	for(i = 0; i < nrPersoane; i++) 
+	{
+		fread(&dim, 1, sizeof(dim), f);
+		fread(str, 1, dim, f);
+		str[dim] = 0;
+		v[i].prenume = strdup(str);
+		
+		fread(&dim, 1, sizeof(dim), f); 
+        	fread(str, 1, dim, f);
+        	str[dim] = 0;
+		v[i].nume = strdup(str); 
+	}
 	fclose(f);
 }
 
