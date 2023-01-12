@@ -74,13 +74,14 @@ int main() {
 
     int n_a, m_a, n_b, m_b;
     scanf("%d%d", &n_a, &m_a);
-    MATRICE * ma = creeaza_MATRICE(n_a, m_a);
+    MATRICE *ma = creeaza_MATRICE(n_a, m_a);
     citeste_MATRICE(ma);
     scanf("%d%d", &n_b, &m_b);
-    MATRICE * mb = creeaza_MATRICE(n_b, m_b);
+    MATRICE *mb = creeaza_MATRICE(n_b, m_b);
     citeste_MATRICE(mb);
 
-    MATRICE * md = inmulteste_MATRICE(ma, mb);
+    MATRICE *md = inmulteste_MATRICE(ma, mb);
     scrie_MATRICE(md);
 
-    retu
+    return 0;
+}
