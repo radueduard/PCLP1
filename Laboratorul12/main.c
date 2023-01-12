@@ -91,7 +91,7 @@ int main(int argc, char **argv) {
   creare_fisier(nume_fisier);
   sort(nume_fisier);
   afisare_ecran(nume_fisier);
-  // find("2076372361", nume_fisier);
+  // find("2076372361", nume_fisier); //
   // modify("2087790854", nume_fisier);
   return 0;
 }
