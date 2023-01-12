@@ -13,18 +13,38 @@ void serializeaza(Persoana v[], int nrPersoane, char* fileName)
 {
 	FILE* f = fopen(fileName, "wb");
 
-	//TODO! Adauga codul de serializare: ~10 linii
-
-	fclose(f);
+    for(int i = 0; i < nrPersoane; i++){
+        int dimNume = strlen(v[i].nume);
+        int dimPrenume = strlen(v[i].prenume);
+        fwrite(&dimNume, 4, 1, f);
+        fwrite(&dimPrenume, 4, 1, f);
+    }
+    for(int i = 0; i < nrPersoane; i++){
+        fwrite(v[i].nume, sizeof(char), strlen(v[i].nume), f);
+        fwrite(v[i].prenume, sizeof(char), strlen(v[i].prenume), f);
+    }
+    fclose(f);
 }
 
-void deserializeaza(Persoana v[], int nrPersoane, char* fileName)
-{
-	FILE* f = fopen(fileName, "rb");
+void deserializeaza(Persoana v[], int nrPersoane, char* fileName) {
+    FILE *f = fopen(fileName, "rb");
 
-	//TODO! Adauga codul de deserializare: ~10 linii
+    for (int i = 0; i < nrPersoane; i++) {
+        int dimNume, dimPrenume;
+        fread(&dimNume, 4, 1, f);
+        fread(&dimPrenume, 4, 1, f);
 
-	fclose(f);
+        v[i].nume = (char *) malloc(sizeof(char) * (dimNume + 1));
+        v[i].prenume = (char *) malloc(sizeof(char) * (dimPrenume + 1));
+    }
+
+    for (int i = 0; i < nrPersoane; i++) {
+        fread(v[i].nume, sizeof(char), strlen(v[i].nume), f);
+        fread(v[i].prenume, sizeof(char), strlen(v[i].prenume), f);
+        v[i].nume[strlen(v[i].nume)] = '\0';
+        v[i].prenume[strlen(v[i].prenume)] = '\0';
+    }
+    fclose(f);
 }
 
 int main()
